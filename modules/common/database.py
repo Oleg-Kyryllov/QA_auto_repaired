@@ -4,7 +4,8 @@ import sqlite3
 class Database:
     def __init__(self):
         self.connection = sqlite3.connect(
-            r"/Users/okyryllo/Oleg_Progg/git_rep/QAAUTO" + r"/become_qa_auto.db"
+            r"/Users/okyryllo/Oleg_Progg/git_repaired/QA_auto_repaired"
+            + r"/become_qa_auto.db"
         )
         self.cursor = self.connection.cursor()
 
