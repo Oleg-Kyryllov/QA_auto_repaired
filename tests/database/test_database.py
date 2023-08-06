@@ -83,6 +83,16 @@ def test_product_insert1():
 @pytest.mark.database
 def test_product_insert1():
     db = Database()
+    db.insert_product(4, "нічого", "сіль", -11)
+    water_qnt = db.select_product_qnt_by_id(4)
+
+    assert water_qnt[0][0] != "нічого"
+    print(water_qnt)
+
+
+@pytest.mark.database
+def test_product_insert2():
+    db = Database()
     db.insert_product(4, "нічого", "сіль", "солодке")
     water_qnt = db.select_product_qnt_by_id(4)
 
